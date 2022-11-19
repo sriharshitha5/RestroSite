@@ -1,0 +1,143 @@
+<html>
+    <head>
+        <title>Card Payment</title>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .center{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn{
+            text-align: center;
+            margin: auto;
+        }
+        body {
+          font-family: Arial;
+          font-size: 17px;
+          padding: 8px;
+        }
+        
+        * {
+          box-sizing: border-box;
+        }
+        .r1{
+          display: -ms-flexbox; 
+          display: flex;
+          -ms-flex-wrap: 25%;
+          flex-wrap: wrap;
+          margin: 0 -16px;
+        }
+        .row1{
+          display: -ms-flexbox; 
+          display: flex;
+          -ms-flex-wrap: 25%;
+          flex-wrap: wrap;
+          margin: 0 -16px;
+        }
+       
+        .row {
+          display: -ms-flexbox; 
+          display: flex;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          margin: 0 -16px;
+        }
+        .container {
+          background-color: #f2f2f2;
+          padding: 5px 20px 15px 20px;
+          border: 1px solid lightgrey;
+          border-radius: 3px;
+        }
+        
+        input[type=text] {
+          width: 100%;
+          margin-bottom: 20px;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+        }
+        .Ac{
+            font-family: Arial;
+          font-size: 17px;
+          padding: 8px;
+          text-align: center;
+        }
+    </style>
+    </head>
+    <body>
+        
+        <section class="payment" id="payment">
+            <form action="sucessful.html" method="post">
+                <div class="row" >
+                    <label for="fname" class="Ac">Accepted Cards</label>
+                        <div class="column">
+                            <br>
+                            <i class="fa fa-cc-visa" style="color:navy;" style="width:20px ;height: 20px;" ></i>
+                        </div>
+                        <div class="column">
+                            <br>
+                            <i class="fa fa-cc-amex" style="color:blue;"></i>
+                        </div>    
+                        <div class="column">
+                            <br>    
+                            <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                        </div> 
+                        <div class="column">
+                            <br>
+                            <i class="fa fa-cc-discover" style="color:orange;"></i>
+                        </div>
+                </div>  <div class="row"> 
+                <table cellspacing="50" cellpadding='50' class="center">   <tr> 
+                     
+                    <td><div class="col-50">
+                                <label for="cname">Name on Card</label>
+                                <input type="text" id="cname" name="cardname" placeholder="Enter name">
+                            </div></td>
+                           
+                           <td> <div class="col-50">
+                                
+                                <label for="ccnum">Debit/Credit card number</label>
+                                <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                            </div></td></tr>
+                            <tr>
+                              
+                                <td><div class="col-50">
+                                
+                                <label for="expmonth">Exp Month</label>
+                                <input type="text" id="expmonth" name="expmonth" placeholder="September" >
+                            </div></td>
+                            
+                            <td><div class="col-50">
+                                
+                                <label for="expyear">Exp Year</label>
+                                <input type="text" id="expyear" name="expyear" placeholder="2026">
+                            </div></td></tr>
+                            <tr>
+                                
+                                <td>
+                            <div class="col-75">
+                                
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" name="cvv" placeholder="352">
+                            </div></td></tr>
+                         </table></div>
+                <input type="submit" value="pay now" class="btn" >
+            </form>
+        </section>
+        <!--<div class="loader-container">
+            <img src="images/loader.gif" alt="" >
+        </div>
+        <script src="js/script1.js"></script>-->
+    </body>
+</html>
+
+
+
