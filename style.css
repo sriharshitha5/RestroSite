@@ -60,7 +60,20 @@ section{
 .heading span{
   color:var(--red);
 }
-
+.btns{
+  margin-top: 1rem;
+  display: inline-block;
+  font-size: 1.7rem;
+  border:.2rem solid var(--red);
+  color:var(--red);
+  background: var(--black);
+  border-radius: .5rem;
+  cursor: pointer;
+  padding:.8rem 3rem;
+}
+.order-button{
+  margin-left: 500px;
+}
 .btn{
   display: inline-block;
   padding:.8rem 3rem;
@@ -149,7 +162,7 @@ header .navbar a:hover{
   gap:1.5rem;
   min-height: 100vh;
   align-items: center;
-  background:url(../home-bg.jpg) no-repeat;
+  background:url(../images/home-bg.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -471,6 +484,45 @@ header .navbar a:hover{
 
 .order .row form .btn:hover{
   background:var(--red);
+}
+
+.col-md-6 {
+  display:flex;
+  font-family: 'Nunito';
+  color: rgb(255, 0, 0);
+  justify-content: space-between;
+  flex-flow: column;
+  background-color: #f5baa371;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius:12px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius:12px ;
+  margin-left: auto;
+  margin-right: auto;
+  /*box-shadow: 2px 4px rgba(0,0,0,0.1);*/  
+}
+.invoice{
+  margin-left: auto;
+  margin-right: auto;
+}
+.invoice.payment2{
+  margin-left: auto;
+  margin-right: auto;
+}
+.mt-3{
+  display:flex;
+}
+.billed{
+  font-family:'Nunito';
+  color:black;
+  background-color:rgb(249, 249, 243);
+  padding: 2px 2px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius:8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius:8px ;
+  font-display: fallback;
+  margin: 5px 10px;
 }
 
 .payment .row{
