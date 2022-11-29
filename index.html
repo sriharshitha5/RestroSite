@@ -1,11 +1,14 @@
 
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <title>food website</title>
 
     <!-- font awesome cdn link  -->
@@ -14,6 +17,11 @@
     <!-- custom css file link  -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src=”https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js”></script>
+    <script src=”https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js”></script>
+    <script src=”https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js”></script>
+
+    <script src="https://kit.fontawesome.com/f52f9e4d4c.js" crossorigin="anonymous"></script>
     <style>
         body {
         font-family: Arial;
@@ -23,6 +31,10 @@
       h3{
         text-align: center;
       }
+      .order-container{
+    margin-top:10px;
+    font-size: 3rem;
+}
         
     </style>
 </head>
@@ -76,11 +88,11 @@
     <div class="box-container">
 
         <div class="box">
-            <img class="image" src="s-img-1.jpg" alt="">
+            <img class="image" src="images/s-img-1.jpg" alt="">
             <div class="content">
-                <img src="s-1.png" alt="">
+                <img src="images/s-1.png" alt="">
                 <h3>tasty burger</h3>
-                <p>An everyday classic burger with a delectable patty filled with potatoes, carrots and tasty Indian spices; topped with crunchy lettuce and mayonaise.This crust is exceptionally flavorful and delightful, something you should not miss at any cost.</p>
+                <p>An everyday classic burger with a delectable patty filled with potatoes, carrots and tasty Indian spices; topped with crunchy lettuce and mayonaise. This crust is exceptionally flavorful and delightful, something you should not miss at any cost</p>
             </div>
         </div>
         <div class="box">
@@ -147,9 +159,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
+                <i class="fas fa-star"></i>
             </div>
-            <a href="placed.html" class="btn">order now</a>
+            <div class="order-container">
+                <i onClick="Increment('burger',299)" class="fa fa-plus"style="color:rgb(255,0, 0);font-size:30px;"></i>
+                <span id="burger" class="counter-value">&nbsp;0 &nbsp;</span>
+                <i onClick="Decrement('burger',299)" class="fa fa-minus" style="color:rgb(255,0, 0);font-size:30px;"></i>
+            </div>
         </div>
         <div class="box">
             <span class="price"> 599/- </span>
@@ -162,7 +178,11 @@
                 <i class="fas fa-star"></i>
                 <i class="far fa-star"></i>
             </div>
-            <a href="placed.html" class="btn">order now</a>
+            <div class="order-container">
+                <i onClick="Increment('cakes',599)" class="fa fa-plus"style="color:rgb(255,0, 0);font-size:30px;"></i>
+                <span id="cakes" class="counter-value" >&nbsp;0&nbsp;</span>
+                <i onClick="Decrement('cakes',599)" class="fa fa-minus" style="color:rgb(255,0, 0);font-size:30px;"></i>
+            </div>
         </div>
         <div class="box">
             <span class="price"> 149/- </span>
@@ -175,10 +195,14 @@
                 <i class="fas fa-star"></i>
                 <i class="far fa-star"></i>
             </div>
-            <a href="placed.html" class="btn">order now</a>
+            <div class="order-container">
+                <i onClick="Increment('sweets',149)" class="fa fa-plus"style="color:rgb(255,0, 0);font-size:30px;"></i>
+                <span id="sweets" class="counter-value" >&nbsp;0&nbsp;</span>
+                <i onClick="Decrement('sweets',149)" class="fa fa-minus" style="color:rgb(255,0, 0);font-size:30px;"></i>
+            </div>
         </div>
         <div class="box">
-            <span class="price"> 99/- </span>
+            <span class="price"> 99/-</span>
             <img src="p-4.jpg" alt="">
             <h3>tasty cupcakes</h3>
             <div class="stars">
@@ -188,7 +212,11 @@
                 <i class="fas fa-star"></i>
                 <i class="far fa-star"></i>
             </div>
-            <a href="placed.html" class="btn">order now</a>
+            <div class="order-container">
+                <i onClick="Increment('cupcakes',99)" class="fa fa-plus"style="color:rgb(255,0, 0);font-size:30px;"></i>
+                <span id="cupcakes" class="counter-value" >&nbsp;0&nbsp;</span>
+                <i onClick="Decrement('cupcakes',99)" class="fa fa-minus" style="color:rgb(255,0, 0);font-size:30px;"></i>
+            </div>
         </div>
         <div class="box">
             <span class="price"> 129/- </span>
@@ -201,7 +229,11 @@
                 <i class="fas fa-star"></i>
                 <i class="far fa-star"></i>
             </div>
-            <a href="placed.html" class="btn">order now</a>
+            <div class="order-container">
+                <i onClick="Increment('drinks',129)" class="fa fa-plus"style="color:rgb(255,0, 0);font-size:30px;"></i>
+                <span id="drinks" class="counter-value" >&nbsp;0&nbsp;</span>
+                <i onClick="Decrement('drinks',129)" class="fa fa-minus" style="color:rgb(255,0, 0);font-size:30px;"></i>
+            </div>
         </div>
         <div class="box">
             <span class="price"> 79/- </span>
@@ -214,7 +246,11 @@
                 <i class="fas fa-star"></i>
                 <i class="far fa-star"></i>
             </div>
-            <a href="placed.html" class="btn">order now</a>
+            <div class="order-container">
+                <i onClick="Increment('icecream',79)" class="fa fa-plus"style="color:rgb(255,0, 0);font-size:30px;"></i>
+                <span id="icecream" class="counter-value" >&nbsp;0&nbsp;</span>
+                <i onClick="Decrement('icecream',79)" class="fa fa-minus" style="color:rgb(255,0, 0);font-size:30px;"></i>
+            </div>
         </div>
 
     </div>
@@ -258,12 +294,14 @@
 
     <div class="box-container">
 
-       <div class="box">
+        <div class="box">
             <img src="g-1.jpg" alt="">
             <div class="content">
                 <h3>Spicy Chicken Burger</h3>
                 <p>179/-</p>
-                <a href="placed.html" class="btn">ordern now</a>
+                <i onClick="Increment('chickenburger',179)" class="fa fa-plus"style="color:rgb(255,0, 0);font-size:30px;"></i>
+                <span id="chickenburger" class="counter-value" >&nbsp;0&nbsp;</span>
+                <i onClick="Decrement('chickenburger',179)" class="fa fa-minus" style="color:rgb(255,0, 0);font-size:30px;"></i>
             </div>
         </div>
         <div class="box">
@@ -271,7 +309,9 @@
             <div class="content">
                 <h3>Chicken sandwich</h3>
                 <p>149/-</p>
-                <a href="placed.html" class="btn">ordern now</a>
+                <i onClick="Increment('sandwich',149)" class="fa fa-plus"style="color:rgb(255,0, 0);font-size:30px;"></i>
+                <span id="sandwich" class="counter-value" >&nbsp;0&nbsp;</span>
+                <i onClick="Decrement('sandwich',149)" class="fa fa-minus" style="color:rgb(255,0, 0);font-size:30px;"></i>
             </div>
         </div>
         <div class="box">
@@ -279,7 +319,9 @@
             <div class="content">
                 <h3>Spicy Shawarma </h3>
                 <p>119/-</p>
-                <a href="placed.html" class="btn">ordern now</a>
+                <i onClick="Increment('shawarma',119)" class="fa fa-plus"style="color:rgb(255,0, 0);font-size:30px;"></i>
+                <span id="shawarma" class="counter-value" >&nbsp;0&nbsp;</span>
+                <i onClick="Decrement('shawarma',119)" class="fa fa-minus" style="color:rgb(255,0, 0);font-size:30px;"></i>
             </div>
         </div>
         <div class="box">
@@ -287,47 +329,60 @@
             <div class="content">
                 <h3>Chocolate CupCake</h3>
                 <p>49/-</p>
-                <a href="placed.html" class="btn">ordern now</a>
+                <i onClick="Increment('Chocolate CupCake',49)" class="fa fa-plus"style="color:rgb(255,0, 0);font-size:30px;"></i>
+                <span id="Chocolate CupCake" class="counter-value" >&nbsp;0&nbsp;</span>
+                <i onClick="Decrement('Chocolate CupCake',49)" class="fa fa-minus" style="color:rgb(255,0, 0);font-size:30px;"></i>
+                
             </div>
         </div>
         <div class="box">
             <img src="g-5.jpg" alt="">
             <div class="content">
-                <h3>Sweet Toast</h3>
-                <p>69/-</p>
-                <a href="#" class="btn">ordern now</a>
+                <h3>Marshmellow</h3>
+                <p>89/-</p>
+                <i onClick="Increment('Marshmellow',89)" class="fa fa-plus"style="color:rgb(255,0, 0);font-size:30px;"></i>
+                <span id="Marshmellow" class="counter-value" >&nbsp;0&nbsp;</span>
+                <i onClick="Decrement('Marshmellow',89)" class="fa fa-minus" style="color:rgb(255,0, 0);font-size:30px;"></i>
             </div>
         </div>
         <div class="box">
             <img src="g-6.jpg" alt="">
             <div class="content">
                 <h3>Chicken nuggets</h3>
-                <p>219/-</p>
-                <a href="#" class="btn">ordern now</a>
+                <p>249/-</p>
+                <i onClick="Increment('Chicken nuggets',249)" class="fa fa-plus"style="color:rgb(255,0, 0);font-size:30px;"></i>
+                <span id="Chicken nuggets" class="counter-value" >&nbsp;0&nbsp;</span>
+                <i onClick="Decrement('Chicken nuggets',249)" class="fa fa-minus" style="color:rgb(255,0, 0);font-size:30px;"></i>
             </div>
         </div>
         <div class="box">
             <img src="g-7.jpg" alt="">
             <div class="content">
-                <h3>Toasted Omlet</h3>
-                <p>89/-</p>
-                <a href="placed.html" class="btn">ordern now</a>
+                <h3>Spicy Omlet</h3>
+                <p>99/-</p>
+                <i onClick="Increment('Spicy Omlet',99)" class="fa fa-plus"style="color:rgb(255,0, 0);font-size:30px;"></i>
+                <span id="Spicy Omlet" class="counter-value" >&nbsp;0&nbsp;</span>
+                <i onClick="Decrement('Spicy Omlet',99)" class="fa fa-minus" style="color:rgb(255,0, 0);font-size:30px;"></i>
             </div>
         </div>
         <div class="box">
             <img src="g-8.jpg" alt="">
             <div class="content">
-                <h3>toffies</h3>
-                <p>59/-</p>
-                <a href="placed.html" class="btn">ordern now</a>
+                <h3>Chocolate</h3>
+                <p>45/-</p>
+                <i onClick="Increment('Chocolate',45)" class="fa fa-plus"style="color:rgb(255,0, 0);font-size:30px;"></i>
+                <span id="Chocolate" class="counter-value" >&nbsp;0&nbsp;</span>
+                <i onClick="Decrement('Chocolate',45)" class="fa fa-minus" style="color:rgb(255,0, 0);font-size:30px;"></i>
             </div>
         </div>
         <div class="box">
             <img src="g-9.jpg" alt="">
             <div class="content">
-                <h3>BlueBerry Bread</h3>
-                <p>49/-</p>
-                <a href="placed.html" class="btn">ordern now</a>
+                <h3>BlueBerry Cake</h3>
+                <p>75/-</p>
+                <i onClick="Increment('BlueBerry Cake',75)" class="fa fa-plus"style="color:rgb(255,0, 0);font-size:30px;"></i>
+                <span id="BlueBerry Cake" class="counter-value" >&nbsp;0&nbsp;</span>
+                <i onClick="Decrement('BlueBerry Cake',75)" class="fa fa-minus" style="color:rgb(255,0, 0);font-size:30px;"></i>
             </div>
         </div>
 
@@ -350,22 +405,63 @@
         <form action="">
 
             <div class="inputBox">
-                <input type="text" placeholder="name">
-                <input type="email" placeholder="email">
+                <input type="text" id="username" placeholder="name">
+                <input type="email" id="email" placeholder="email">
             </div>
 
             <div class="inputBox">
-                <input type="number" placeholder="contact">
-                <input type="number" placeholder="table number">
+                <input type="number" id="number" placeholder="contact">
+                <input type="number" id="num"placeholder="table number">
             </div>
 
-            <a href="placed.html" class="btn">order now</a>
+            
 
         </form>
-
+        <div class="text-center order-button">
+            <button id="order" class="btn btn-primary" onclick="order()" >Order now</button>
+        </div>
     </div>
+    
 
 </section>
+
+<div id="bill_payment" class="payment">
+    <div class="container mt-5">
+        <div class="d-flex justify-content-center row">
+            <div class="col-md-8">
+                <div class="p-3 bg-white rounded">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h1 class="text-uppercase">Invoice</h1>
+                            <div class="billed"><span class="font-weight-bold text-uppercase">Name:&nbsp;&nbsp;</span><span id="invoice_name" class="ml-1"></span></div>
+                            <div class="billed"><span class="font-weight-bold text-uppercase">Phone number:&nbsp;&nbsp;</span><span id="invoice_number" class="ml-1"></span></div>
+                            <div class="billed"><span class="font-weight-bold text-uppercase">Email:&nbsp;&nbsp;</span><span id="invoice_email" class="ml-1"></span></div>
+                            <div class="billed"><span class="font-weight-bold text-uppercase">Table Number:&nbsp;&nbsp;</span><span id="invoice_date" class="ml-1"></span></div>
+                        </div>
+                        
+                    <div class="mt-3 text-center">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        
+                                        <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Product&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                        <th>quntity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                        <th>Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- order section ends -->
 <!--payment section starts-->
@@ -386,12 +482,13 @@
                 </div>
             <div class="r1">
                 <table>
-                    <tr><td><a href="card.html" class="btn">DEBIT/CREDIT</a></td></tr>
-                    <!--<a href="#" class="btn" >Cash</a>
-                    <tr><td><input type="submit" value="DEBIT/CREDIT" class="btn" action="card.html"></td></tr>
-                    -->
-                    <tr><td><a href="sucessful.html" class="btn">Cash</a></td></tr>
-                    <tr><td><a href="upi.html" class="btn">UPI</a></td></tr>
+                <tr><td><input type="submit" value="DEBIT/CREDIT" class="btn" action="card.html"></td></tr>
+                
+                
+                <!--<a href="#" class="btn" >Cash</a>-->
+                <tr><td><a href="sucessful.html" class="btn">Cash</a></td></tr>
+                <tr><td><a href="upi.html" class="btn">UPI</a></td></tr>
+                <!---->
             </div>
             </table>
         </form>
